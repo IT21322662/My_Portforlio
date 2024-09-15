@@ -29,3 +29,22 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100);
 };
+
+document.getElementById("seeMoreBtn").addEventListener("click", function() {
+    var moreContent = document.getElementById("moreContent");
+    
+    if (moreContent.style.display === "none") {
+        moreContent.style.display = "block";
+        this.textContent = "See Less";
+    } else {
+        moreContent.style.display = "none";
+        this.textContent = "See More";
+    }
+});
+
+// toggle icon navbar
+
+menuIcon.addEventListener('click', () => {
+  navbar.classList.toggle('open');
+});
+
