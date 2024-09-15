@@ -48,3 +48,24 @@ menuIcon.addEventListener('click', () => {
   navbar.classList.toggle('open');
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const text = "Hello, It's Me";
+    const helloText = document.getElementById("helloText");
+    let index = 0;
+  
+    function typeWriter() {
+      if (index < text.length) {
+        helloText.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 150); // Adjust speed by changing the timeout
+      }
+    }
+  
+    typeWriter();
+  });
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    // Add the 'loaded' class to trigger the animations
+    document.body.classList.add('loaded');
+  });
+  
